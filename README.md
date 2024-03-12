@@ -3,4 +3,5 @@
 ```sh
 git clone --single-branch --branch client https://github.com/moio9/Box-Manager.git
 cd Box-Manager
-ln -s manager.sh /data/data/com.termux/files/usr/bin/manager
+chmod +x manager.sh
+ln -s manager.sh $PREFIX/bin/manager

@@ -72,7 +72,7 @@ mobox_dynarec(){
        file_suffix=$(echo "$file_suffix" | sed -E 's/=.*//')
        output_file=$(echo "$file_suffix" | tr '[:upper:]' '[:lower:]')
         
-       output_file="$path/dynarec/${output_file}.cfg"
+       output_file="$path/dynarec/${output_file}.conf"
 
        mkdir -p $dynarec
        echo "$line" > "$output_file"

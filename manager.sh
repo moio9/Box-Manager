@@ -63,6 +63,38 @@ else
   echo "File is present!"
 fi
 
+donations(){
+  echo "
+######################################
+# Configurations loaded successfully #
+######################################
+┌────────────────────────────────────┐
+│    Please help keep this project   │
+│             alive:                 │
+│                                    │
+├────────────────────────────────────┤
+│    Monero:   46Mk8t9uLY7jnBXnyHM   │
+│              yVARvwk1Y7jcGEQwKLN8  │
+│              GtGGBioncjKLgkEa33jE  │
+│              N2ibgkQjoFZWVwXXwsM3  │
+│              vzAFz4RzV7psLow6      │
+│                                    │
+├────────────────────────────────────┤
+│    Bitcoin:  bc1qgxp74eza7jaf4fdw  │
+│              5cl3sanqvnh0cjmz0w9scz│
+│                                    │
+├────────────────────────────────────┤
+│    Ethereum: 0xa024a505Ec24c7eA16  │
+│               3985eC89D56e614B9AdAa│
+│               e                    │
+│                                    │
+├────────────────────────────────────┤
+│    PayPal:   paypal.me/moioyoyo    │
+└────────────────────────────────────┘
+  moioyoyo76@gmail.com
+"
+}
+
 mobox_dynarec(){
   while IFS= read -r line; do
      dynarec="$path/dynarec"
@@ -75,7 +107,7 @@ mobox_dynarec(){
        output_file="$path/dynarec/${output_file}.conf"
 
        mkdir -p $dynarec
-       echo "$line" > "$output_file"
+       echo "$line" > "$output_file"z1
        #cat > "$output_file" << EOF "$line"  
          
        if [[ $line == " " || $line == *"#"* ]]; then
@@ -90,6 +122,10 @@ mobox_dynarec(){
 
 mobox(){
   mobox_dynarec
+  
+  if [ $? -eq 0 ]; then
+    donations
+  fi
 }
 
 # Verifica daca fisierul exista
@@ -100,3 +136,5 @@ if [ -e "$cfg" ]; then
 else
   echo "Fisierul '$cfg' nu exista."
 fi
+
+exit 0

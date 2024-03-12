@@ -51,7 +51,7 @@ fi
 # Acceseaza primul argument furnizat
 game="$1"
 script_dir="$(cd "$(dirname "$0")" && pwd)"
-cfg="$pwd/presents/$game.config"
+cfg="$script_dir/presents/$game.config"
 
 if ! test -e $cfg; then
   echo "File has not been foud.

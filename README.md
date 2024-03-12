@@ -1,5 +1,5 @@
 # Box-Manager
-#INSTALL
+#_INSTALL_
 ```sh
 git clone --single-branch --branch client https://github.com/moio9/Box-Manager.git
 cd Box-Manager

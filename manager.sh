@@ -50,7 +50,7 @@ fi
 
 # Acceseaza primul argument furnizat
 game="$1"
-script_dir="$(cd "$(dirname "$0")" && pwd)"
+script_dir="$(dirname "$(readlink -f "$0")")"
 cfg="$script_dir/presents/$game.config"
 
 if ! test -e $cfg; then

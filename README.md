@@ -5,8 +5,13 @@ git clone --single-branch --branch client https://github.com/moio9/Box-Manager.g
 cd Box-Manager
 chmod +x manager.sh
 ln -s "$(realpath manager.sh)" $PREFIX/bin/manager
-
 ```
+#_USAGE_
+```sh
+manager -l<launcher> -b(optional backup) <game>
+```
+example: ```manager -lmobox -b fallout_nv```
+
 ## **Please help to keep this project alive:**
 
 **Monero:** 46Mk8t9uLY7jnBXnyHMyVARvwk1Y7jcGEQwKLN8GtGGBioncjKLgkEa33jEN2ibgkQjoFZWVwXXwsM3vzAFz4RzV7psLow6
